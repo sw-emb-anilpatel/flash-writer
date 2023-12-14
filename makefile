@@ -149,6 +149,15 @@ DEVICE   = RZV2L
 DDR_TYPE = DDR4
 DDR_SIZE = 2GB_1PCS
 SWIZZLE  = T1BC
+else ifeq ("$(BOARD)", "SM2S_RZV2L")
+#--------------------------------------
+# MSC RZ/V2L SM2S board
+#--------------------------------------
+FILENAME_ADD = _RZV2L_SM2S
+DEVICE   = RZV2L
+DDR_TYPE = DDR4
+DDR_SIZE = 2GB_1PCS
+SWIZZLE  = CUSTOM
 else ifeq ("$(BOARD)", "RZV2L_15MMSQ_DEV")
 #--------------------------------------
 # RZ/V2L 15MMSQ Dev board
