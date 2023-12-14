@@ -33,6 +33,7 @@
 #define	TOTAL_SIZE_32MB			0x02000000
 #define	TOTAL_SIZE_16MB			0x01000000
 #define	TOTAL_SIZE_8MB			0x00800000
+#define	TOTAL_SIZE_4MB			0x00400000
 
 #define	CYPRESS_MANUFACTURER_ID		0x01	/* Cypress	*/
 #define	WINBOND_MANUFACTURER_ID		0xEF	/* Winbond	*/
@@ -73,6 +74,7 @@
 #define	DEVICE_ID_MT25QU02G		0xBB22
 
 #define	DEVICE_ID_AT25QL128A		0x4218
+#define	DEVICE_ID_AT25SF321B		0x8701
 
 void InitRPC_Mode(void);
 void mem_copy(uint32_t prgStartAd, uint32_t sector_Ad, uint32_t accessSize);

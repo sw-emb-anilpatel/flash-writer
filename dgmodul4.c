@@ -233,6 +233,8 @@ static uint32_t CheckQspiFlashId(void)
 		break;
 		case DIALOG_MANUFACTURER_ID:
 			PutStr(" Dialog : ", 0);
+			Data2HexAscii(deviceId, str, 4);
+			PutStr(str, 1);
 			switch(deviceId)
 			{
 				case DEVICE_ID_AT25QL128A:
@@ -240,6 +242,13 @@ static uint32_t CheckQspiFlashId(void)
 						gQspi_sa_size    = SA_64KB;
 						gQspi_end_addess = TOTAL_SIZE_16MB - 0x8000 - 1;
 				break;
+
+				case DEVICE_ID_AT25SF321B:
+						PutStr("AT25SF321B", 1);
+						gQspi_sa_size    = SA_64KB;
+						gQspi_end_addess = TOTAL_SIZE_4MB - 0x8000 - 1;
+				break;
+
 				default:
 					ret = -1;
 				break;
